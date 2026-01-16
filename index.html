@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcolm Lismore Photography</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./mel.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a5a5c',
+                        secondary: '#d4b483',
+                        accent: '#8b5a2b',
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'serif'],
+                        sans: ['Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <body class="bg-gray-50">
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const menuBtn = document.getElementById("menu-btn");
+                const mobileMenu = document.getElementById("mobile-menu");
+
+                if (menuBtn && mobileMenu) {
+                    menuBtn.addEventListener("click", () => {
+                        mobileMenu.classList.toggle("hidden");
+                    });
+                }
+            });
+        </script>
+
+        <!-- NAVBAR -->
+        <nav
+            class="backdrop-blur-xl bg-black/80 shadow-xl sticky top-0 z-50 font-[Montserrat] uppercase tracking-wide border-b border-white/10">
+
+            <div class="flex items-center justify-between py-4 px-3 md:px-10 lg:px-10">
+
+                <!-- ★ NEW LUXURY LOGO -->
+                <a href="#" class="text-xl font-extrabold italic tracking-widest flex items-center gap-2 select-none 
+    bg-gradient-to-r from-orange-400 via-yellow-300 to-white bg-clip-text text-transparent
+    drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] hover:drop-shadow-[0_0_18px_rgba(255,180,80,0.6)]
+    transition-all duration-300">
+                    ML<span class="text-white/70 not-italic font-light tracking-normal">Photography</span>
+                </a>
+
+
+                <!-- Menu Button (Mobile) -->
+                <button id="menu-btn" class="md:hidden focus:outline-none hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10 text-white text-sm">
+                    <a href="#home" class="nav-link hover:text-orange-400 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-orange-400 transition">About</a>
+                    <a href="#gallery" class="nav-link hover:text-orange-400 transition">Gallery</a>
+                    <a href="#pricing" class="nav-link hover:text-orange-400 transition">Pricing</a>
+                    <a href="#contact" class="nav-link hover:text-orange-400 transition">Contact</a>
+
+                    <button class="ml-4 bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold
+                shadow-md hover:bg-yellow-400 hover:scale-105 transition-all duration-300">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden bg-black/90 text-white px-6 py-4 space-y-4 md:hidden">
+                <a href="#home" class="block hover:text-orange-400 transition">Home</a>
+                <a href="#about" class="block hover:text-orange-400 transition">About</a>
+                <a href="#gallery" class="block hover:text-orange-400 transition">Gallery</a>
+                <a href="#pricing" class="block hover:text-orange-400 transition">Pricing</a>
+                <a href="#contact" class="block hover:text-orange-400 transition">Contact</a>
+
+                <button
+                    class="w-full bg-yellow-400 text-white py-2 rounded-full font-semibold shadow-md hover:bg-yellow-400 transition-all">
+                    Book Now
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- SIMPLE JS FOR MOBILE MENU -->
+        <script>
+            document.querySelector('.mobile-menu-button').addEventListener('click', () => {
+                document.querySelector('.mobile-menu').classList.toggle('hidden');
+            }
+
+            );
+        </script>
+
+        <body class="bg-gray-900 text-white">
+
+            <body class="bg-gray-900 text-white">
+
+                <!-- HERO SECTION -->
+                <section id="home"
+                    class="relative min-h-screen flex items-center text-white overflow-hidden pt-10 pb-16">
+
+                    <!-- Background Image -->
+                    <div class="absolute inset-0 bg-center bg-cover scale-105 brightness-[0.40]"
+                        style="background-image: url('https://images.pexels.com/photos/9910840/pexels-photo-9910840.jpeg?cs=srgb&dl=pexels-cottonbro-studio-9910840.jpg&fm=jpg');">
+                    </div>
+
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
+
+                    <!-- Main Container -->
+                    <div class="container mx-auto px-6 relative z-10">
+                        <div class="flex flex-col md:flex-row items-center justify-between gap-16 md:gap-24">
+
+                            <!-- LEFT CONTENT -->
+                            <div class="md:w-1/2 max-w-xl space-y-6" data-animate>
+
+                                <!-- Top Info Badge -->
+                                <p class="inline-flex items-center gap-3">
+                                    <span class="bg-white/10 px-3 py-1 rounded-full text-sm font-medium">
+                                        Scotland Based
+                                    </span>
+                                    <span class="text-sm text-white/80">
+                                        Available Worldwide • Weddings • Wildlife • Events
+                                    </span>
+                                </p>
+
+                                <!-- Main Heading -->
+                                <h1 class="text-2xl md:text-4xl font-extrabold leading-tight drop-shadow-xl">
+                                    Capturing Scotland's Wild Beauty
+                                </h1>
+
+
+
+                                <!-- Achievements -->
+                                <p class="text-sm md:text-base text-white/80 max-w-lg leading-relaxed">
+                                    Award-winning photographer with a decade of experience. Published in
+                                    <span class="font-semibold text-secondary">National Geographic</span> &
+                                    <span class="font-semibold text-secondary">Outdoor Lens</span>.
+                                </p>
+
+                                <!-- BUTTONS -->
+                                <div class="flex flex-col sm:flex-row items-center gap-4 pt-8">
+
+                                    <!-- Primary CTA -->
+                                    <a href="#contact" class="bg-secondary text-black font-semibold px-6 py-2.5 text-sm rounded-full
+              hover:bg-secondary/90 transition-colors duration-200
+              focus:outline-none focus:ring-2 focus:ring-secondary">
+                                        Book a Session
+                                    </a>
+
+                                    <!-- Secondary CTA -->
+                                    <a href="#portfolio" class="border border-white text-white font-medium px-6 py-2.5 text-sm rounded-full
+              hover:bg-white hover:text-black transition-colors duration-200
+              focus:outline-none focus:ring-2 focus:ring-white">
+                                        View Portfolio
+                                    </a>
+
+                                    <!-- Tertiary CTA -->
+                                    <button id="playReel" class="inline-flex items-center gap-2 px-5 py-2.5 text-sm rounded-full
+                   bg-black text-white
+                   hover:bg-neutral-800 transition-colors duration-200
+                   focus:outline-none focus:ring-2 focus:ring-white">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                        <span>Watch Showreel</span>
+                                    </button>
+
+                                </div>
+
+
+
+
+                                <!-- Stats Section -->
+                                <div class="flex gap-12 pt-6">
+                                    <div>
+                                        <div class="text-3xl font-bold text-secondary">2K+</div>
+                                        <div class="text-xs text-white/70">Photos Delivered</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-secondary">10+</div>
+                                        <div class="text-xs text-white/70">Years Experience</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-3xl font-bold text-secondary">200+</div>
+                                        <div class="text-xs text-white/70">Happy Clients</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- RIGHT CONTENT (Optional Hero Image / Portrait) -->
+                            <div class="md:w-1/2 flex justify-center" data-animate>
+                                <div
+                                    class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:scale-105 transform transition-transform duration-500">
+                                    <img src="https://img.freepik.com/free-photo/man-with-camera_23-2147689324.jpg?semt=ais_hybrid&w=740&q=80"
+                                        alt="Professional Portrait" class="w-500px"
+                                        style="height:600px; object-fit:cover;" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                </section>
+
+                <!-- SIMPLE JS FOR MOBILE MENU -->
+                <script>
+                    document.querySelector('.mobile-menu-button').addEventListener('click', () => {
+                        document.querySelector('.mobile-menu').classList.toggle('hidden');
+                    });
+                </script>
+            </body>
+
+
+            <!-- Scroll Indicator -->
+            <div class=" absolute bottom-8 left-1/2 -translate-x-1/2 ">
+                <a href="#about "
+                    class="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition focus:ring-2 focus:ring-white/30 ">
+                    <svg class="w-5 h-5 " viewBox="0 0 24 24 " fill="none " stroke="currentColor ">
+                        <path d="M6 9l6 6 6-6 " stroke-width="2 " stroke-linecap="round " stroke-linejoin="round " />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Video Modal -->
+            <div id="videoModal "
+                class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-4 backdrop-blur-sm ">
+                <div class="w-full max-w-3xl relative bg-black rounded-lg overflow-hidden shadow-xl ">
+                    <div class="relative pb-[56.25%] ">
+                        <iframe id="reelFrame " class="absolute inset-0 w-full h-full " src=" " title="Showreel "
+                            allow="autoplay; fullscreen " allowfullscreen></iframe>
+                    </div>
+
+                    <button id="closeModal "
+                        class="absolute top-3 right-3 text-white bg-white/10 hover:bg-white/20 rounded-full p-2 transition ">
+                        ✕
+                    </button>
+                </div>
+            </div>
+
+            </section>
+
+            <!-- JavaScript -->
+            <script>
+                // Parallax Background
+                const bg = document.querySelector('#home > div[aria-hidden="true "]');
+                window.addEventListener('scroll', () => {
+                    const offset = window.scrollY * 0.2;
+                    bg.style.transform = `translateY(${offset}px) scale(1.03)`;
+                });
+
+                // Fade-in Animations
+                document.addEventListener('DOMContentLoaded', () => {
+                    document.querySelectorAll('[data-animate]').forEach((el, i) => {
+                        el.style.opacity = 0;
+                        el.style.transform = 'translateY(14px)';
+                        setTimeout(() => {
+                            el.style.transition = 'opacity 700ms ease, transform 700ms ease';
+                            el.style.opacity = 1;
+                            el.style.transform = 'translateY(0)';
+                        }, 200 * i);
+                    });
+                });
+
+                // Video Modal
+                const playBtn = document.getElementById('playReel');
+                const modal = document.getElementById('videoModal');
+                const frame = document.getElementById('reelFrame');
+                const closeBtn = document.getElementById('closeModal');
+
+                playBtn.addEventListener('click', () => {
+                    frame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1&rel=0 "; // Replace YOUR_VIDEO_ID with actual YouTube video ID
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+
+                closeBtn.addEventListener('click', () => {
+                    frame.src = " ";
+                    modal.classList.add('hidden');
+                });
+
+                // Close modal with ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === "Escape ") {
+                        frame.src = " ";
+                        modal.classList.add('hidden');
+                    }
+                });
+            </script>
+
+
+            <!-- Services Section -->
+            <section class="py-20 bg-gray-100">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900">Photography Services</h2>
+                    <div class="grid md:grid-cols-3 gap-10">
+                        <!-- Landscape Photography -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg text-center flex flex-col justify-between transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5693cdf8-8efb-4871-a652-9cf61b53b7fd.png"
+                                    alt="Dramatic Scottish highlands landscape"
+                                    class="w-full h-52 object-cover rounded-xl mb-6">
+                                <h3 class="text-2xl font-semibold mb-3 text-gray-800">Landscape Photography</h3>
+                                <p class="text-gray-600 mb-6">Stunning captures of Scotland's breathtaking landscapes
+                                    from the rugged Highlands to serene coastal vistas.</p>
+                            </div>
+                            <a href="#contact"
+                                class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition duration-300">Learn
+                                More</a>
+                        </div>
+
+                        <!-- Wildlife Photography -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg text-center flex flex-col justify-between transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8bb5760d-782c-4b5b-8565-0837beda34cd.png"
+                                    alt="Close-up of a puffin with colorful beak"
+                                    class="w-full h-52 object-cover rounded-xl mb-6">
+                                <h3 class="text-2xl font-semibold mb-3 text-gray-800">Wildlife Photography</h3>
+                                <p class="text-gray-600 mb-6">Intimate portraits of Scotland's diverse wildlife,
+                                    particularly the coastal birds of the North West.</p>
+                            </div>
+                            <a href="#contact"
+                                class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition duration-300">Learn
+                                More</a>
+                        </div>
+
+                        <!-- Special Events -->
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg text-center flex flex-col justify-between transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/430ba185-41e7-4057-9956-138bf2de8882.png"
+                                    alt="Couple silhouetted against sunset on a Scottish beach"
+                                    class="w-full h-52 object-cover rounded-xl mb-6">
+                                <h3 class="text-2xl font-semibold mb-3 text-gray-800">Special Events</h3>
+                                <p class="text-gray-600 mb-6">Beautiful documentation of weddings, portraits, and
+                                    special occasions with a natural, authentic style.</p>
+                            </div>
+                            <a href="#contact"
+                                class="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-full transition duration-300">Learn
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- About Section -->
+            <section id="about " class="py-16 bg-gray-50 ">
+                <div class="container mx-auto px-6 ">
+                    <div class="flex flex-col md:flex-row items-center ">
+                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12 "><img
+                                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bdc3ac7-fcf8-4691-a334-c6594cf56172.png "
+                                alt="Malcolm Lismore photographing landscapes with his
+                            camera equipment on Scottish coastline " class="w-full rounded-lg shadow-md "></div>
+                        <div class="md:w-1/2 ">
+                            <h2 class="text-3xl font-bold mb-6 ">About Malcolm</h2>
+                            <p class="mb-4 ">Based on the wild and beautiful North West coast of Scotland, I've been
+                                capturing the stunning landscapes and wildlife of this region for over 15 years. My
+                                photography is driven by a deep connection to the natural world and
+                                a desire to share its wonder with others.</p>
+                            <p class="mb-4 ">What began as a passion for documenting Scotland's dramatic scenery has
+                                evolved into a full-time career encompassing not just nature photography, but also
+                                weddings, portraits, and special events - all approached with the same
+                                eye for natural beauty and authentic moments.</p>
+                            <p class="mb-6 ">When I'm not behind the camera, you'll find me hiking the coastal paths,
+                                kayaking the lochs, or simply watching the ever-changing light dance across the
+                                landscape - often with my camera close at hand, just in case.</p>
+                            <div class="flex space-x-4 "><a href="# "
+                                    class="bg-[#FFD700] hover:bg-opacity-90 text-black font-bold py-3 px-6 rounded-full transition duration-300 inline-block ">View
+                                    Gallery </a><a href="#contact "
+                                    class="border-2 border-primary hover:bg-primary hover:text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block ">Get
+                                    in Touch </a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="py-16 bg-white">
+                <div class="container mx-auto px-6">
+
+                    <h2 class="text-3xl font-bold text-center mb-4">Gallery</h2>
+                    <p class="text-center mb-12 max-w-2xl mx-auto">
+                        Explore a selection of my work across different photography categories. Each image tells a
+                        unique story.
+                    </p>
+
+                    <!-- Gallery Navigation -->
+                    <div class="flex justify-center flex-wrap gap-4 mb-8">
+                        <button class="gallery-category active" data-category="all">All</button>
+                        <button class="gallery-category" data-category="landscape">Landscapes</button>
+                        <button class="gallery-category" data-category="wildlife">Wildlife</button>
+                        <button class="gallery-category" data-category="events">Events</button>
+                        <button class="gallery-category" data-category="portraits">Portraits</button>
+                        <button class="gallery-category" data-category="urban">Urban</button>
+                    </div>
+
+                    <!-- Gallery Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+
+                        <!-- VISIBLE IMAGES -->
+                        <div class="gallery-item relative overflow-hidden rounded-lg" data-category="landscape">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Highland Mountains</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg" data-category="wildlife">
+                            <img src="https://images.pexels.com/photos/34730100/pexels-photo-34730100.jpeg"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Red Deer Stag</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg" data-category="events">
+                            <img src="https://images.pexels.com/photos/31842357/pexels-photo-31842357.jpeg"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Wedding Moments</p>
+                            </div>
+                        </div>
+
+                        <!-- HIDDEN IMAGES -->
+                        <div class="gallery-item relative overflow-hidden rounded-lg hidden" data-category="landscape">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=800"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Forest Trail</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg hidden" data-category="wildlife">
+                            <img src="https://images.pexels.com/photos/20393233/pexels-photo-20393233.jpeg"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Elephant Family</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg hidden" data-category="events">
+                            <img src="https://images.pexels.com/photos/32333369/pexels-photo-32333369.jpeg"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Birthday Event</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg hidden" data-category="portraits">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=800"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Model Portrait</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg hidden" data-category="urban">
+                            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=800"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Urban Night Lights</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item relative overflow-hidden rounded-lg hidden" data-category="urban">
+                            <img src="https://images.pexels.com/photos/7594378/pexels-photo-7594378.jpeg"
+                                class="w-full h-64 object-cover">
+                            <div
+                                class="gallery-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <p class="text-white">Urban Night Lights</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- VIEW MORE BUTTON -->
+                    <div class="text-center mt-10">
+                        <button id="view-more"
+                            class="inline-block border-2 border-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-full transition">
+                            View Full Portfolio
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- JavaScript -->
+            <script>
+                const viewMoreBtn = document.getElementById('view-more');
+                const hiddenImages = document.querySelectorAll('#gallery-grid .hidden');
+
+                viewMoreBtn.addEventListener('click', () => {
+                    hiddenImages.forEach(img => img.classList.remove('hidden'));
+                    viewMoreBtn.textContent = "View More Photos";
+                    viewMoreBtn.disabled = true;
+                });
+            </script>
+
+            <!-- Pricing Section -->
+            <section id="pricing" class="py-16 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-4">Pricing & Packages</h2>
+                    <p class="text-center mb-12 max-w-2xl mx-auto">
+                        Custom packages available for all photography needs. Contact me to discuss your specific
+                        requirements.
+                    </p>
+
+                    <!-- Main Pricing Cards -->
+                    <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+
+                        <!-- Landscape & Wildlife Card -->
+                        <div class="flex-1 bg-white p-8 rounded-lg shadow-md flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">Landscape & Wildlife</h3>
+                            <p class="text-3xl font-bold mb-6">From £250</p>
+                            <ul class="space-y-3 mb-6 flex-1">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Half-day session (4hrs)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Digital images with print release</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Basic editing</li>
+                            </ul>
+                            <a href="#contact"
+                                class="mt-auto block w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded-full text-center transition duration-300">
+                                Book Session
+                            </a>
+                        </div>
+
+                        <!-- Wedding Photography Card -->
+                        <div
+                            class="flex-1 bg-white p-8 rounded-lg shadow-lg border-2 border-yellow-400 transform hover:scale-105 transition duration-300 flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">Wedding Photography</h3>
+                            <p class="text-3xl font-bold mb-6">From £1200</p>
+                            <ul class="space-y-3 mb-6 flex-1">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Full day coverage (8-10hrs)</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>USB with high-res digital images</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Second photographer available</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Complimentary engagement session</li>
+                            </ul>
+                            <a href="#contact"
+                                class="mt-auto block w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded-full text-center transition duration-300">
+                                Book Now
+                            </a>
+                        </div>
+
+                        <!-- Portrait Sessions Card -->
+                        <div class="flex-1 bg-white p-8 rounded-lg shadow-md flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">Portrait Sessions</h3>
+                            <p class="text-3xl font-bold mb-6">From £175</p>
+                            <ul class="space-y-3 mb-6 flex-1">
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>1-2 hour session</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Multiple location options</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>15+ edited digital images</li>
+                                <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>Online gallery</li>
+                            </ul>
+                            <a href="#contact"
+                                class="mt-auto block w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-3 px-6 rounded-full text-center transition duration-300">
+                                Book Session
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Additional Services Section -->
+                    <section id="additional-services" class="w-full bg-gray-50 py-24">
+                        <div class="max-w-6xl mx-auto px-6">
+
+                            <!-- Section Header -->
+                            <div class="text-center mb-16">
+                                <h3 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-wide">
+                                    Additional Services
+                                </h3>
+                                <div
+                                    class="w-40 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full">
+                                </div>
+                            </div>
+
+                            <!-- Services Grid -->
+                            <div class="grid md:grid-cols-3 gap-12">
+
+                                <!-- Service 1 -->
+                                <div
+                                    class="service-card bg-white p-8 border border-gray-100 rounded-3xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center">
+                                    <img src="https://www.milkbooks.com/media/16280/howtocreatetheperfectweddingalbum-main.jpg"
+                                        alt="Prints & Albums"
+                                        class="mb-6 w-full h-48 object-cover rounded-xl shadow-sm">
+                                    <h4 class="font-semibold text-2xl mb-4 text-gray-900">Prints & Albums</h4>
+                                    <p class="text-gray-600 mb-6 max-w-xs text-center">
+                                        Transform your digital memories into tangible keepsakes. Custom photo albums,
+                                        high-quality prints, and framing options beautifully.
+                                    </p>
+                                    <a href="#contact"
+                                        class="inline-block px-6 py-2 bg-yellow-400 text-white rounded-full font-medium hover:bg-indigo-600 transition">
+                                        Learn More
+                                    </a>
+                                </div>
+
+                                <!-- Service 2 -->
+                                <div
+                                    class="service-card bg-white p-8 border border-gray-100 rounded-3xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center">
+                                    <img src="https://i.ytimg.com/vi/kiz5ub-LDDQ/maxresdefault.jpg"
+                                        class=" mb-6 w-full h-48 object-cover rounded-xl shadow-sm ">
+                                    <h4 class=" font-semibold text-2xl mb-4 text-gray-900 ">Photo Editing</h4>
+                                    <p class=" text-gray-600 mb-6 max-w-xs text-center ">
+                                        Enhance your photos with professional editing, retouching, and color correction.
+                                        Ideal for personal photos, portfolios, or social media content.
+                                    </p>
+                                    <a href=" #contact "
+                                        class=" inline-block px-6 py-2 bg-yellow-400 text-white rounded-full font-medium hover:bg-#FFD700 transition ">
+                                        Learn More
+                                    </a>
+                                </div>
+
+                                <!-- Service 3 -->
+                                <div
+                                    class=" service-card bg-white p-8 border border-gray-100 rounded-3xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center ">
+                                    <img src=" https://dropinblog.net/34249096/files/kris-atomic-twitchcon-live-stream.jpeg "
+                                        alt=" Event Coverage "
+                                        class=" mb-6 w-full h-48 object-cover rounded-xl shadow-sm ">
+                                    <h4 class=" font-semibold text-2xl mb-4 text-gray-900 ">Event Coverage</h4>
+                                    <p class=" text-gray-600 mb-6 max-w-xs text-center ">
+                                        Capture every unforgettable moment with professional event photography.
+                                        Weddings, corporate events, and special moments preserved perfectly.
+                                    </p>
+                                    <a href=" #contact "
+                                        class=" inline-block px-6 py-2 bg-yellow-400 text-white rounded-full font-medium hover:bg-indigo-600 transition ">
+                                        Learn More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                    <!-- Testimonials (Full-Width Background) -->
+                    <!-- Testimonials (Full-Width Background) -->
+                    <section class=" w-full py-20 bg-gray-50 ">
+                        <div class=" max-w-[1500px] mx-auto px-6 ">
+
+                            <h2 class=" text-4xl font-extrabold text-center mb-6 tracking-wide text-gray-900 ">
+                                Client Testimonials
+                            </h2>
+
+                            <div
+                                class=" w-28 h-1.5 bg-gradient-to-r from-pink-500 to-orange-500 mx-auto rounded-full mb-14 ">
+                            </div>
+
+                            <div class=" grid md:grid-cols-3 gap-10 ">
+
+                                <!-- Testimonial 1 -->
+                                <div
+                                    class=" bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-transform duration-300 ">
+                                    <div class=" flex items-center justify-center mb-5 ">
+                                        <img src="https://tse1.explicit.bing.net/th/id/OIP.CEQfwWi8b4K13gLxuT1CcwHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                            class=" w-14 h-14 rounded-full shadow border-2 border-white " alt=" ">
+                                        <div class=" ml-4 text-left ">
+                                            <h4 class=" font-bold text-lg ">Sarah MacLeod</h4>
+                                            <p class=" text-sm text-gray-600 ">Wedding Client</p>
+                                        </div>
+                                    </div>
+
+                                    <p class=" italic text-gray-700 mb-5 leading-relaxed ">
+                                        " Malcolm captured our Scottish coastal wedding perfectly. His eye for detail
+                                        and storytelling made the whole experience unforgettable. "
+                                    </p>
+
+                                    <div class=" flex justify-center gap-1 ">
+                                        <span class=" text-yellow-400 text-xl ">★</span><span
+                                            class=" text-yellow-400 text-xl ">★</span>
+                                        <span class=" text-yellow-400 text-xl ">★</span><span
+                                            class=" text-yellow-400 text-xl ">★</span>
+                                        <span class=" text-yellow-400 text-xl ">★</span>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 2 -->
+                                <div
+                                    class=" bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-transform duration-300 ">
+                                    <div class=" flex items-center justify-center mb-5 ">
+                                        <img src="https://tse1.mm.bing.net/th/id/OIP.YIre5HGHiqBa7DCmrF4KwwHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                            class=" w-14 h-14 rounded-full shadow border-2 border-white " alt=" ">
+                                        <div class=" ml-4 text-left ">
+                                            <h4 class=" font-bold text-lg ">James Campbell</h4>
+                                            <p class=" text-sm text-gray-600 ">Wildlife Workshop</p>
+                                        </div>
+                                    </div>
+
+                                    <p class=" italic text-gray-700 mb-5 leading-relaxed ">
+                                        " His passion for wildlife photography and patience during the workshop helped
+                                        me capture photos I never thought possible. "
+                                    </p>
+
+                                    <div class=" flex justify-center gap-1 ">
+                                        <span class=" text-yellow-400 text-xl ">★</span><span
+                                            class=" text-yellow-400 text-xl ">★</span>
+                                        <span class=" text-yellow-400 text-xl ">★</span><span
+                                            class=" text-yellow-400 text-xl ">★</span>
+                                        <span class=" text-yellow-400 text-xl ">★</span>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 3 -->
+                                <div
+                                    class=" bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-transform duration-300 ">
+                                    <div class=" flex items-center justify-center mb-5 ">
+                                        <img src="https://tse2.mm.bing.net/th/id/OIP.88U_XTsYICEJKNBtXBG9gAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                            class=" w-14 h-14 rounded-full shadow border-2 border-white " alt=" ">
+                                        <div class=" ml-4 text-left ">
+                                            <h4 class=" font-bold text-lg ">Fiona Grant</h4>
+                                            <p class=" text-sm text-gray-600 ">Family Portraits</p>
+                                        </div>
+                                    </div>
+
+                                    <p class=" italic text-gray-700 mb-5 leading-relaxed ">
+                                        " The entire session felt relaxed and natural. Malcolm captured every emotion
+                                        and turned them into timeless portraits. "
+                                    </p>
+
+                                    <div class=" flex justify-center gap-1 ">
+                                        <span class=" text-yellow-400 text-xl ">★</span><span
+                                            class=" text-yellow-400 text-xl ">★</span>
+                                        <span class=" text-yellow-400 text-xl ">★</span><span
+                                            class=" text-yellow-400 text-xl ">★</span>
+                                        <span class=" text-yellow-400 text-xl ">★</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                    <!-- Contact Form -->
+                    <section id=" contact " class=" py-16 bg-gray-50 ">
+                        <div class=" container mx-auto px-6 ">
+                            <div class=" max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md ">
+                                <h2 class=" text-3xl font-bold text-center mb-8 ">Get In Touch</h2>
+                                <form id=" enquiryForm " class=" space-y-6 ">
+                                    <div class=" grid md:grid-cols-2 gap-6 ">
+                                        <input type=" text " id=" name " name=" name " placeholder=" Your Name "
+                                            required
+                                            class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                        <input type=" email " id=" email " name=" email " placeholder=" Your Email "
+                                            required
+                                            class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                    </div>
+                                    <div class=" grid md:grid-cols-2 gap-6 ">
+                                        <input type=" tel " id=" phone " name=" phone " placeholder=" Your Phone "
+                                            class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                        <input type=" text " id=" date " name=" date "
+                                            placeholder=" Specific date or timeframe "
+                                            class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                    </div>
+                                    <input type=" text " id=" location " name=" location "
+                                        placeholder=" Event Location "
+                                        class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                    <div class=" grid md:grid-cols-2 gap-6 ">
+                                        <select id=" service " name=" service "
+                                            class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                            <option value=" ">Select a service</option>
+                                            <option value=" landscape ">Landscape Photography</option>
+                                            <option value=" wildlife ">Wildlife Photography</option>
+                                            <option value=" wedding ">Wedding Photography</option>
+                                            <option value=" portrait ">Portrait Session</option>
+                                            <option value=" other ">Other</option>
+                                        </select>
+                                        <select id=" hear-about " name=" hear-about "
+                                            class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent ">
+                                            <option value=" ">How did you hear about us?</option>
+                                            <option value=" search ">Online Search</option>
+                                            <option value=" social ">Social Media</option>
+                                            <option value=" word ">Word of Mouth</option>
+                                            <option value=" other ">Other</option>
+                                        </select>
+                                    </div>
+                                    <textarea id=" message " name=" message " rows=" 4 " placeholder=" Your Message "
+                                        class=" w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent "></textarea>
+                                    <button type=" submit "
+                                        class=" w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 px-6 rounded-full transition duration-300 ">
+                                        Send Enquiry
+                                    </button>
+                                </form>
+                                <div id=" formSuccess "
+                                    class=" hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg ">
+                                    Thank you for your enquiry! I'll get back to you within 48 hours.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="site-footer">
+                        <div class="footer-container">
+
+                            <!-- Brand -->
+                            <div class="footer-brand">
+                                <h3>Malcolm Lismore Photography</h3>
+                                <p>
+                                    Capturing timeless moments with creativity and passion. Specialising in weddings,
+                                    portraits, lifestyle, and event photography.
+                                </p>
+                            </div>
+
+                            <!-- Links -->
+                            <div class="footer-links">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Contact -->
+                            <div class="footer-contact">
+                                <h4>Contact</h4>
+                                <p>
+                                    Colombo, Sri Lanka<br> malcolmlismorephotography.com
+                                    <br> +94 74 389 0704
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Bottom Bar -->
+                        <div class="footer-bottom">
+                            © 2025 Malcolm Lismore Photography · All Rights Reserved
+                        </div>
+                    </footer>
+                    <style>
+                        .site-footer {
+                            width: 100vw;
+                            margin-left: calc(-50vw + 50%);
+                            background-color: #111;
+                            color: #e2e2e2;
+                            padding: 70px 0 40px;
+                            font-family: "Segoe UI", Arial, sans-serif;
+                        }
+
+                        .footer-container {
+                            max-width: 1400px;
+                            margin: auto;
+                            padding: 0 40px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 60px;
+                            justify-content: space-between;
+                        }
+
+                        .footer-brand h3 {
+                            font-family: Georgia, "Times New Roman", serif;
+                            font-size: 28px;
+                            letter-spacing: 0.6px;
+                            margin-bottom: 18px;
+                        }
+
+                        .footer-brand p {
+                            max-width: 480px;
+                            line-height: 1.9;
+                            color: #c9c9c9;
+                        }
+
+                        .footer-links h4,
+                        .footer-contact h4 {
+                            font-family: Georgia, serif;
+                            font-size: 18px;
+                            margin-bottom: 16px;
+                            letter-spacing: 0.4px;
+                        }
+
+                        .footer-links ul {
+                            list-style: none;
+                            padding: 0;
+                            line-height: 2.2;
+                        }
+
+                        .footer-links a {
+                            color: #d6d6d6;
+                            text-decoration: none;
+                            transition: color 0.3s ease;
+                        }
+
+                        .footer-links a:hover {
+                            color: #ffffff;
+                        }
+
+                        .footer-contact p {
+                            line-height: 2;
+                            color: #cfcfcf;
+                        }
+
+                        .footer-bottom {
+                            margin-top: 50px;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #9e9e9e;
+                            letter-spacing: 0.3px;
+                        }
+                    </style>
+        </body>
+
+</html>
